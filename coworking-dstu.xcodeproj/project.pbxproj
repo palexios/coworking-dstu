@@ -13,6 +13,8 @@
 		FA1AEAA72D2789DB00DE4648 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FA1AEAA62D2789DB00DE4648 /* Base */; };
 		FA1AEAAF2D278CB900DE4648 /* UserTypeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEAAE2D278CB900DE4648 /* UserTypeSelectionViewController.swift */; };
 		FA1AEAB12D278DFE00DE4648 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEAB02D278DFE00DE4648 /* LoginViewController.swift */; };
+		FA1AEAB32D278ED500DE4648 /* GeneralControlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEAB22D278ED500DE4648 /* GeneralControlling.swift */; };
+		FA1AEAB52D287AB100DE4648 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEAB42D287AB100DE4648 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FA1AEAA82D2789DB00DE4648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA1AEAAE2D278CB900DE4648 /* UserTypeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTypeSelectionViewController.swift; sourceTree = "<group>"; };
 		FA1AEAB02D278DFE00DE4648 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA1AEAB22D278ED500DE4648 /* GeneralControlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralControlling.swift; sourceTree = "<group>"; };
+		FA1AEAB42D287AB100DE4648 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				FA1AEA9E2D2789DA00DE4648 /* ViewController.swift */,
 				FA1AEAAE2D278CB900DE4648 /* UserTypeSelectionViewController.swift */,
 				FA1AEAB02D278DFE00DE4648 /* LoginViewController.swift */,
+				FA1AEAB42D287AB100DE4648 /* RegisterViewController.swift */,
+				FA1AEAB22D278ED500DE4648 /* GeneralControlling.swift */,
 				FA1AEAA32D2789DB00DE4648 /* Assets.xcassets */,
 				FA1AEAA52D2789DB00DE4648 /* LaunchScreen.storyboard */,
 				FA1AEAA82D2789DB00DE4648 /* Info.plist */,
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1AEAB12D278DFE00DE4648 /* LoginViewController.swift in Sources */,
+				FA1AEAB32D278ED500DE4648 /* GeneralControlling.swift in Sources */,
 				FA1AEA9F2D2789DA00DE4648 /* ViewController.swift in Sources */,
+				FA1AEAB52D287AB100DE4648 /* RegisterViewController.swift in Sources */,
 				FA1AEAAF2D278CB900DE4648 /* UserTypeSelectionViewController.swift in Sources */,
 				FA1AEA9B2D2789DA00DE4648 /* AppDelegate.swift in Sources */,
 			);

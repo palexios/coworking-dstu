@@ -108,9 +108,11 @@ final class UserTypeSelectionViewController: UIViewController {
     // MARK: - OBJC Methods
     @objc private func visitorButtonAction() {
         self.navigationController?.viewControllers = [LoginViewController()]
+        GeneralControlling.userTypeSelection = .user
     }
     
     @objc private func adminButtonAction() {
         self.navigationController?.viewControllers = [LoginViewController()]
+        GeneralControlling.userTypeSelection = .admin
     }
 }
