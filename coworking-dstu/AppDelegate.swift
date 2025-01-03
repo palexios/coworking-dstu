@@ -1,22 +1,17 @@
-//
-//  AppDelegate.swift
-//  coworking-dstu
-//
-//  Created by Александр Павлицкий on 03.01.2025.
-//
-
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+final class AppDelegate: UIResponder, UIApplicationDelegate {
+    // MARK: - Properties
+    var window: UIWindow?
+    
+    // MARK: - Methods
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = ViewController()
+        window?.makeKeyAndVisible()
+        
         return true
     }
-
-
 }
-
