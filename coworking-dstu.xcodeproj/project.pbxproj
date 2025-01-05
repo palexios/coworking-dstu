@@ -15,6 +15,9 @@
 		FA1AEAB12D278DFE00DE4648 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEAB02D278DFE00DE4648 /* LoginViewController.swift */; };
 		FA1AEAB32D278ED500DE4648 /* GeneralControlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEAB22D278ED500DE4648 /* GeneralControlling.swift */; };
 		FA1AEAB52D287AB100DE4648 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEAB42D287AB100DE4648 /* RegisterViewController.swift */; };
+		FA1AEAB72D287C6200DE4648 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEAB62D287C6200DE4648 /* DatabaseManager.swift */; };
+		FA1AEAB92D288FA900DE4648 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEAB82D288FA900DE4648 /* Statement.swift */; };
+		FA1AEABB2D28C52700DE4648 /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEABA2D28C52700DE4648 /* Visitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		FA1AEAB02D278DFE00DE4648 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FA1AEAB22D278ED500DE4648 /* GeneralControlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralControlling.swift; sourceTree = "<group>"; };
 		FA1AEAB42D287AB100DE4648 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FA1AEAB62D287C6200DE4648 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		FA1AEAB82D288FA900DE4648 /* Statement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
+		FA1AEABA2D28C52700DE4648 /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				FA1AEAB02D278DFE00DE4648 /* LoginViewController.swift */,
 				FA1AEAB42D287AB100DE4648 /* RegisterViewController.swift */,
 				FA1AEAB22D278ED500DE4648 /* GeneralControlling.swift */,
+				FA1AEAB62D287C6200DE4648 /* DatabaseManager.swift */,
+				FA1AEABA2D28C52700DE4648 /* Visitor.swift */,
+				FA1AEAB82D288FA900DE4648 /* Statement.swift */,
 				FA1AEAA32D2789DB00DE4648 /* Assets.xcassets */,
 				FA1AEAA52D2789DB00DE4648 /* LaunchScreen.storyboard */,
 				FA1AEAA82D2789DB00DE4648 /* Info.plist */,
@@ -149,6 +158,9 @@
 				FA1AEAB52D287AB100DE4648 /* RegisterViewController.swift in Sources */,
 				FA1AEAAF2D278CB900DE4648 /* UserTypeSelectionViewController.swift in Sources */,
 				FA1AEA9B2D2789DA00DE4648 /* AppDelegate.swift in Sources */,
+				FA1AEAB72D287C6200DE4648 /* DatabaseManager.swift in Sources */,
+				FA1AEABB2D28C52700DE4648 /* Visitor.swift in Sources */,
+				FA1AEAB92D288FA900DE4648 /* Statement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
