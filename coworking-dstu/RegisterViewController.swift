@@ -5,6 +5,12 @@ final class RegisterViewController: UIViewController {
     var isMale: Bool?
     
     // MARK: - GUI
+    let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return scrollView
+    }()
     let fullnameTitle: UILabel = {
         let title = UILabel()
         title.text = "ФИО:"
@@ -253,6 +259,7 @@ final class RegisterViewController: UIViewController {
         genderFemaleButton.addTarget(self, action: #selector(femaleButtonAction), for: .touchUpInside)
         
         configureViewController()
+        configureScrollView()
         setupFullName()
         setupDateOfBirth()
         setupGender()
@@ -264,6 +271,15 @@ final class RegisterViewController: UIViewController {
     }
     
     // MARK: - Methods
+    func configureScrollView() {
+        self.view.addSubview(scrollView)
+        NSLayoutConstraint.activate([
+            self.scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            self.scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            self.scrollView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            self.scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+        ])
+    }
     func configureViewController() {
         self.view.backgroundColor = .white
         self.navigationItem.largeTitleDisplayMode = .always
@@ -272,56 +288,56 @@ final class RegisterViewController: UIViewController {
     }
     
     func setupFullName() {
-        self.view.addSubview(fullnameTitle)
+        self.scrollView.addSubview(fullnameTitle)
         NSLayoutConstraint.activate([
-            self.fullnameTitle.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            self.fullnameTitle.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 47),
+            self.fullnameTitle.topAnchor.constraint(equalTo: self.scrollView.topAnchor),
+            self.fullnameTitle.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 47),
         ])
-        self.view.addSubview(fullnameTextField)
+        self.scrollView.addSubview(fullnameTextField)
         NSLayoutConstraint.activate([
             self.fullnameTextField.topAnchor.constraint(equalTo: self.fullnameTitle.bottomAnchor, constant: 4),
-            self.fullnameTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 46)
+            self.fullnameTextField.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 46)
         ])
     }
     func setupDateOfBirth() {
-        self.view.addSubview(dateOfBirthTitle)
+        self.scrollView.addSubview(dateOfBirthTitle)
         NSLayoutConstraint.activate([
             self.dateOfBirthTitle.topAnchor.constraint(equalTo: self.fullnameTextField.bottomAnchor, constant: 20),
-            self.dateOfBirthTitle.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 47),
+            self.dateOfBirthTitle.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 47),
         ])
-        self.view.addSubview(dateOfBirthTextField)
+        self.scrollView.addSubview(dateOfBirthTextField)
         NSLayoutConstraint.activate([
             self.dateOfBirthTextField.topAnchor.constraint(equalTo: self.dateOfBirthTitle.bottomAnchor, constant: 4),
-            self.dateOfBirthTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 46)
+            self.dateOfBirthTextField.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 46)
         ])
     }
     
     func setupGender() {
-        self.view.addSubview(genderTitle)
+        self.scrollView.addSubview(genderTitle)
         NSLayoutConstraint.activate([
             self.genderTitle.topAnchor.constraint(equalTo: self.dateOfBirthTextField.bottomAnchor, constant: 20),
-            self.genderTitle.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 47)
+            self.genderTitle.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 47)
         ])
         
-        self.view.addSubview(genderMaleButton)
+        self.scrollView.addSubview(genderMaleButton)
         NSLayoutConstraint.activate([
-            self.genderMaleButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 47),
+            self.genderMaleButton.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 47),
             self.genderMaleButton.topAnchor.constraint(equalTo: self.genderTitle.bottomAnchor, constant: 14)
         ])
         
-        self.view.addSubview(genderMaleTitle)
+        self.scrollView.addSubview(genderMaleTitle)
         NSLayoutConstraint.activate([
             self.genderMaleTitle.leadingAnchor.constraint(equalTo: self.genderMaleButton.trailingAnchor, constant: 6),
             self.genderMaleTitle.topAnchor.constraint(equalTo: self.genderTitle.bottomAnchor, constant: 13)
         ])
         
-        self.view.addSubview(genderFemaleButton)
+        self.scrollView.addSubview(genderFemaleButton)
         NSLayoutConstraint.activate([
-            self.genderFemaleButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 250),
+            self.genderFemaleButton.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 250),
             self.genderFemaleButton.topAnchor.constraint(equalTo: self.genderTitle.bottomAnchor, constant: 14)
         ])
         
-        self.view.addSubview(genderFemaleTitle)
+        self.scrollView.addSubview(genderFemaleTitle)
         NSLayoutConstraint.activate([
             self.genderFemaleTitle.leadingAnchor.constraint(equalTo: self.genderFemaleButton.trailingAnchor, constant: 6),
             self.genderFemaleTitle.topAnchor.constraint(equalTo: self.genderTitle.bottomAnchor, constant: 13)
@@ -329,62 +345,63 @@ final class RegisterViewController: UIViewController {
     }
     
     func setupEmail() {
-        self.view.addSubview(emailTitle)
+        self.scrollView.addSubview(emailTitle)
         NSLayoutConstraint.activate([
             self.emailTitle.topAnchor.constraint(equalTo: self.genderMaleButton.bottomAnchor, constant: 20),
-            self.emailTitle.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 47),
+            self.emailTitle.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 47),
         ])
-        self.view.addSubview(emailTextField)
+        self.scrollView.addSubview(emailTextField)
         NSLayoutConstraint.activate([
             self.emailTextField.topAnchor.constraint(equalTo: self.emailTitle.bottomAnchor, constant: 4),
-            self.emailTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 46)
+            self.emailTextField.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 46)
         ])
     }
     
     func setupPhone() {
-        self.view.addSubview(phoneTitle)
+        self.scrollView.addSubview(phoneTitle)
         NSLayoutConstraint.activate([
             self.phoneTitle.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 20),
-            self.phoneTitle.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 47),
+            self.phoneTitle.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 47),
         ])
-        self.view.addSubview(phoneTextField)
+        self.scrollView.addSubview(phoneTextField)
         NSLayoutConstraint.activate([
             self.phoneTextField.topAnchor.constraint(equalTo: self.phoneTitle.bottomAnchor, constant: 4),
-            self.phoneTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 46)
+            self.phoneTextField.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 46)
         ])
     }
     
     func setupPassword() {
-        self.view.addSubview(passwordTitle)
+        self.scrollView.addSubview(passwordTitle)
         NSLayoutConstraint.activate([
             self.passwordTitle.topAnchor.constraint(equalTo: self.phoneTextField.bottomAnchor, constant: 20),
-            self.passwordTitle.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 47),
+            self.passwordTitle.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 47),
         ])
-        self.view.addSubview(passwordTextField)
+        self.scrollView.addSubview(passwordTextField)
         NSLayoutConstraint.activate([
             self.passwordTextField.topAnchor.constraint(equalTo: self.passwordTitle.bottomAnchor, constant: 4),
-            self.passwordTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 46)
+            self.passwordTextField.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 46)
         ])
     }
     
     func setupRepeatPassword() {
-        self.view.addSubview(repeatPasswordTitle)
+        self.scrollView.addSubview(repeatPasswordTitle)
         NSLayoutConstraint.activate([
             self.repeatPasswordTitle.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 20),
-            self.repeatPasswordTitle.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 47),
+            self.repeatPasswordTitle.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 47),
         ])
-        self.view.addSubview(repeatPasswordTextField)
+        self.scrollView.addSubview(repeatPasswordTextField)
         NSLayoutConstraint.activate([
             self.repeatPasswordTextField.topAnchor.constraint(equalTo: self.repeatPasswordTitle.bottomAnchor, constant: 4),
-            self.repeatPasswordTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 46)
+            self.repeatPasswordTextField.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 46),
         ])
     }
     
     func setupRegisterButton() {
-        self.view.addSubview(registerButton)
+        self.scrollView.addSubview(registerButton)
         NSLayoutConstraint.activate([
             self.registerButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.registerButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -55)
+            self.registerButton.topAnchor.constraint(equalTo: repeatPasswordTextField.bottomAnchor, constant: 50),
+            self.registerButton.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor)
         ])
     }
     
