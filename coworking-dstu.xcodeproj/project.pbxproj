@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FA1AEA9B2D2789DA00DE4648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEA9A2D2789DA00DE4648 /* AppDelegate.swift */; };
-		FA1AEA9F2D2789DA00DE4648 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEA9E2D2789DA00DE4648 /* ViewController.swift */; };
 		FA1AEAA42D2789DB00DE4648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1AEAA32D2789DB00DE4648 /* Assets.xcassets */; };
 		FA1AEAA72D2789DB00DE4648 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FA1AEAA62D2789DB00DE4648 /* Base */; };
 		FA1AEAAF2D278CB900DE4648 /* UserTypeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEAAE2D278CB900DE4648 /* UserTypeSelectionViewController.swift */; };
@@ -18,12 +17,16 @@
 		FA1AEAB72D287C6200DE4648 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEAB62D287C6200DE4648 /* DatabaseManager.swift */; };
 		FA1AEAB92D288FA900DE4648 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEAB82D288FA900DE4648 /* Statement.swift */; };
 		FA1AEABB2D28C52700DE4648 /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1AEABA2D28C52700DE4648 /* Visitor.swift */; };
+		FAE5F1D82D2B73E6005C1204 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5F1D72D2B73E6005C1204 /* UserViewController.swift */; };
+		FAE5F1DA2D2B759D005C1204 /* DeskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5F1D92D2B759D005C1204 /* DeskCollectionViewCell.swift */; };
+		FAE5F1DC2D2B7B4D005C1204 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5F1DB2D2B7B4D005C1204 /* HeaderCollectionReusableView.swift */; };
+		FAE5F1DE2D2B801D005C1204 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5F1DD2D2B801D005C1204 /* Room.swift */; };
+		FAE5F1E02D2B8060005C1204 /* Desk.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5F1DF2D2B8060005C1204 /* Desk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA1AEA972D2789DA00DE4648 /* coworking-dstu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "coworking-dstu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1AEA9A2D2789DA00DE4648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA1AEA9E2D2789DA00DE4648 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA1AEAA32D2789DB00DE4648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA1AEAA62D2789DB00DE4648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA1AEAA82D2789DB00DE4648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +37,11 @@
 		FA1AEAB62D287C6200DE4648 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		FA1AEAB82D288FA900DE4648 /* Statement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
 		FA1AEABA2D28C52700DE4648 /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
+		FAE5F1D72D2B73E6005C1204 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		FAE5F1D92D2B759D005C1204 /* DeskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAE5F1DB2D2B7B4D005C1204 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		FAE5F1DD2D2B801D005C1204 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		FAE5F1DF2D2B8060005C1204 /* Desk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desk.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,20 +74,48 @@
 		FA1AEA992D2789DA00DE4648 /* coworking-dstu */ = {
 			isa = PBXGroup;
 			children = (
-				FA1AEA9A2D2789DA00DE4648 /* AppDelegate.swift */,
-				FA1AEA9E2D2789DA00DE4648 /* ViewController.swift */,
+				FAE5F1E32D2B81FF005C1204 /* LifeCycle */,
+				FAE5F1E22D2B81E3005C1204 /* View */,
+				FAE5F1E12D2B81D3005C1204 /* Model */,
 				FA1AEAAE2D278CB900DE4648 /* UserTypeSelectionViewController.swift */,
 				FA1AEAB02D278DFE00DE4648 /* LoginViewController.swift */,
 				FA1AEAB42D287AB100DE4648 /* RegisterViewController.swift */,
 				FA1AEAB22D278ED500DE4648 /* GeneralControlling.swift */,
 				FA1AEAB62D287C6200DE4648 /* DatabaseManager.swift */,
-				FA1AEABA2D28C52700DE4648 /* Visitor.swift */,
+				FAE5F1D72D2B73E6005C1204 /* UserViewController.swift */,
 				FA1AEAB82D288FA900DE4648 /* Statement.swift */,
 				FA1AEAA32D2789DB00DE4648 /* Assets.xcassets */,
 				FA1AEAA52D2789DB00DE4648 /* LaunchScreen.storyboard */,
 				FA1AEAA82D2789DB00DE4648 /* Info.plist */,
 			);
 			path = "coworking-dstu";
+			sourceTree = "<group>";
+		};
+		FAE5F1E12D2B81D3005C1204 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA1AEABA2D28C52700DE4648 /* Visitor.swift */,
+				FAE5F1DD2D2B801D005C1204 /* Room.swift */,
+				FAE5F1DF2D2B8060005C1204 /* Desk.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAE5F1E22D2B81E3005C1204 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5F1DB2D2B7B4D005C1204 /* HeaderCollectionReusableView.swift */,
+				FAE5F1D92D2B759D005C1204 /* DeskCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAE5F1E32D2B81FF005C1204 /* LifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				FA1AEA9A2D2789DA00DE4648 /* AppDelegate.swift */,
+			);
+			path = LifeCycle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,12 +188,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE5F1DA2D2B759D005C1204 /* DeskCollectionViewCell.swift in Sources */,
 				FA1AEAB12D278DFE00DE4648 /* LoginViewController.swift in Sources */,
+				FAE5F1D82D2B73E6005C1204 /* UserViewController.swift in Sources */,
 				FA1AEAB32D278ED500DE4648 /* GeneralControlling.swift in Sources */,
-				FA1AEA9F2D2789DA00DE4648 /* ViewController.swift in Sources */,
+				FAE5F1DC2D2B7B4D005C1204 /* HeaderCollectionReusableView.swift in Sources */,
+				FAE5F1DE2D2B801D005C1204 /* Room.swift in Sources */,
 				FA1AEAB52D287AB100DE4648 /* RegisterViewController.swift in Sources */,
 				FA1AEAAF2D278CB900DE4648 /* UserTypeSelectionViewController.swift in Sources */,
 				FA1AEA9B2D2789DA00DE4648 /* AppDelegate.swift in Sources */,
+				FAE5F1E02D2B8060005C1204 /* Desk.swift in Sources */,
 				FA1AEAB72D287C6200DE4648 /* DatabaseManager.swift in Sources */,
 				FA1AEABB2D28C52700DE4648 /* Visitor.swift in Sources */,
 				FA1AEAB92D288FA900DE4648 /* Statement.swift in Sources */,
